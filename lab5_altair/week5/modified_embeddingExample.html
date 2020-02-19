@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@3.4.0"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@4"></script>
+</head>
+<body>
+<h3>First Chart</h3>
+<div id="vis"></div>
+<h3>Second Chart</h3>
+<div id="vis2"></div>
+
+<script type="text/javascript">
+		let jsonSpec="resource/c3.json";
+		let jsonSpec2="resource/c4.json";
+		vegaEmbed('#c3', jsonSpec,{theme:'latimes'}).then(function(result) {}).catch(console.error);
+		
+		vegaEmbed('#c4', jsonSpec2,{"renderer":"svg"}).then(function(result) {
+		 let paths=document.getElementById("c4").getElementsByTagName("path");
+        console.log(paths);
+        for (let p of paths){
+            p.setAttribute("stroke-width",5);
+            p.setAttribute("stroke","black");
+        }
+		}).catch(console.error);
+</script>
+</body>
+</html>
