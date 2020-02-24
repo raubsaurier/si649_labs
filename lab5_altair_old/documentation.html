@@ -1,0 +1,110 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@3.4.0"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@4"></script>
+</head>
+
+<body>
+<p>
+1. Do general election favorability ratings tend to follow primary elections? 
+</p>
+This is not an exact comparison, since this data matches Democratic candidates against Trump, but it may inform us if support for a particular candidate might carry into the general election. For instance, we can look at Iowa and New Hampshire and people's polling preferences, compared to the known outcomes of the primaries. We know that Iowa finished with essentially Buttigieg and Sanders tying for first place, and Sanders won New Hampshire with Buttigieg in second. We can also add in Nevada as a third comparison since this is the next primary caucus. 
+<p>
+<img src="ia_nh_nv_dem.svg", height="600", width="900">
+
+</p>
+
+<div id="vis"></div>
+
+<script type="text/javascript">
+	
+let jsonSpec = "img/nv_nh_polling.json"
+vegaEmbed("#vis", jsonSpec, {}).then(function(result){}).catch(
+	console.error)
+
+</script>
+
+In general, we see that Democratic candidates have higher favorability %'s in New Hampshire over Iowa and Nevada. We also see that Amy Klobuchar and Pete Buttigieg were not polled to respondents as much as the other three candidates, although Buttigieg does finish in both states with among the highest favorability percentages. 
+<p>
+Sketch 2: This map chart would display the difference between January 2020's average % favorability compared to January 2019's favorability. A negative value means that favorability was higher in 2019, while a positive value means that favorability was higher in 2020.
+</p>
+<br>
+<img src="sketches/ia_nh_maps.png", height="250", width="400">
+</br>
+
+
+Sketch 3: This barchart would display the % of times that each of the 5 Democratic candidates beat Trump in election questions in our dataset. 
+<p>
+<img src="sketches/pct_beat_trump_sketch.png",height="250", width="400">
+</p>
+
+
+
+<p>
+2. Which Democratic candidates are the "most polarizing"? </p>
+
+We can plot the top 5 current Democratic candidates by their polling history in terms of the difference in head-to-head percentages against Trump. 
+<p>
+<img src="dem_candidate_variability.svg">
+</p>
+<p>
+It looks like Pete Buttigieg and Joe Biden have the highest "variability" in terms of the head-to-head percentage point differences.</p>
+
+<p> Sketch 2: We could also drill down by pollster to look at the "variability" of each candidate over the last year:
+</p>
+<br>
+<img src="sketches/pct_by_polls.png", height="250", width="400">
+</br>
+Sketch 3:
+<img src="sketches/max_diff_states.png", height="250", width="400">
+<p>
+3. Do candidates' electability ratings differ by polling methodology? 
+</p>
+Different candidates appeal to different segments of the population - for example, we know that Joe Biden polls well among older voters, while Bernie Sanders is popular among younger votes. (cite article) How polls are conducted could influence the sampling characteristics of respondents. Younger votes might be more likely to respond to text or online polls, while older votes might be more likely to respond to polls conducted over the phone or via mail. We break down the top 4 Democratic candidates and Donald Trump's average polling percentages by polling method type in the figure below:
+
+
+
+
+
+
+We find that Biden has the highest # of polling questions at 323. Sanders has 296, Elizabeth Warren has 288,
+Pete Buttigieg has 174 and Kamala Harris has 150. These candidates have been in the race for the longest (although Harris has already dropped out), so this is not surprising. Amy Klobuchar, surprisingly, is only mentioned in 34 polling questions. We assume this is because she didn't have the name recognition of her peers until recently. 
+</p>
+<p>
+4. Do Democratic debates change poll opinions among Americans?
+
+FiveThirtyEight has provided opinion poll data that can be used to compare favorability of different potential presidential candidates. For the purposes of this analysis, we decide to look at only the top 5 Democratic candidates (Biden, Sanders, Warren, Buttigieg, and Klobuchar) and current president Donald Trump.
+
+In particular, we are interested if voters' opinions on who they would vote for can be influenced by debate performances, or if they tend to remain relatively stable regardless of debates. We focus on the last five Democratic primary debates. 
+
+</p>
+<p>
+5. Where does Trump do extremely well in terms of voter preferences? 
+
+We probably already have some idea, but a visualization can help us in figuring this out: 
+<img src="median_trump_per_state.svg">
+</p>
+
+<p>
+Sketch 2: This would allow the user to choose the state and Democratic candidate, and then show head-to-head general election performance over time. 
+</p><br>
+<img src="sketches/trump_h2h_time.png", height="250", width="400">
+</br>
+
+Sketch 2: This would show, per poll and state, the head-to-head percentage differences of Democratic contenders vs Trump:
+
+
+<br>
+<img src="sketches/trump_h2h_states.png", height="250", width="400">
+</br>
+
+
+</body>
+</html>
+
+
+
+
+
+

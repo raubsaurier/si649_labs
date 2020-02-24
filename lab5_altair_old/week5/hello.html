@@ -1,0 +1,26 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@3.4.0"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@4"></script>
+</head>
+
+
+<body>
+<h1> Hello! </h1>
+
+<p> How are you? </p>
+
+<div id="vis"></div>
+
+<script type="text/javascript">
+	
+let jsonSpec = "c4.json"
+vegaEmbed("#vis", jsonSpec, {}).then(function(result){}).catch(
+	console.error)
+
+</script>
+
+</body>
+
+</html>
