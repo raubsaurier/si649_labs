@@ -1,43 +1,82 @@
+<!DOCTYPE HTML>
+<!--
+	Transitive by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
 <html>
-<head>
+	<head>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@3.4.0"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@4"></script>
-</head>
-<h1>An Analysis of Election Polls</h1>
-<body>
 
-<p>
-    The 2020 election cycle is shaping up to be one of the most exciting elections in recent history. Current President
-    Donald Trump is a polarizing figure, but so are some of the candidates running for the Democratic nominee. In this
-    article, we will examine three main findings from a FiveThirtyEight dataset that has voter favorability poll results
-    for the 2020 general presidential election. The question presented to respondents was: "If Candidate X were the
-    Democratic nominee, who would you vote for?" (Based on the assumption that President Trump will remain the
-    Republican nominee.)
+		<title>Transitived by Templated</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="subpage">
 
+		<!-- Header -->
+			<header id="header">
+				<div class="logo"><a href="index.html">Transitive <span>by TEMPLATED</span></a></div>
+				<a href="#menu" class="toggle"><span>Menu</span></a>
+			</header>
 
-</p>
+		<!-- Nav -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="generic.html">Generic</a></li>
+					<li><a href="elements.html">Elements</a></li>
+				</ul>
+			</nav>
 
-<h2>1. Do general election favorability ratings tend to follow primary elections?</h2>
+		<!-- One -->
+			<section id="one" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="image fit">
+							<img src="images/pic01.jpg" alt="" />
+						</div>
+						<div class="content">
+							<header class="align-center">
+								<h2>Irena Chen // SI 649 Lab 5</h2>
+								<p>An Analysis of Election Polls</p>
+							</header>
+							<hr />
+							<p> The 2020 election cycle is shaping up to be one of the most exciting elections in recent history. Current President Donald Trump is a polarizing figure, but so are some of the candidates running for the Democratic nominee. In this article, we will examine three main findings from a FiveThirtyEight dataset that has voter favorability poll results for the 2020 general presidential election. The question presented to respondents was: "If Candidate X were the Democratic nominee, who would you vote for?" (Based on the assumption that President Trump will remain the Republican nominee.)</p>
+							<p> 
+						</div>
+					</div>
+				</div>
+			</section>
 
-<p>
-    The primary election cycle has already started in a few states (e.g. Iowa, New Hampshire, and Nevada). We know the
-    results of these primary elections is not an exact comparison to the general presidential election, since this data
-    matches Democratic candidates against Trump, but it may inform us about whether or not support for a particular
-    candidate might carry into the general election. For instance, we can look at people's
-    polling preferences in Iowa, New Hampshire and Nevada, compared to the known outcomes of the primaries/caucuses. We
-    know that
-    Iowa is still being disputed (but Buttigieg and Sanders are functionally tied for 1st place), Sanders won New
-    Hampshire, but Pete Buttigieg (2nd place) was very close to his numbers. In Nevada, Bernie won by a
-    much bigger percentage.
-    Below is a chart that shows the number of times each Democratic candidate beat Trump in a poll, divided by the total
-    number of polls that that candidate was listed in. Here, "beating Trump" is calculated by taking the difference
-    between
-    the % of people who said they would vote for Democratic candidate X and the % of people who said they would vote for
-    Trump. If the difference was positive, this counted as a win.
-</p>
+		<!-- Four -->
+			<section id="four" class="wrapper style3">
+				<div class="inner">
 
-<div>
+					<header class="align-center">
+						<h2>1. Are general election favorability ratings similar to primary election results?</h2>
+										<p>
+				    The primary election cycle has already started in a few states (e.g. Iowa, New Hampshire, and Nevada). We know the
+				    results of these primary elections is not an exact comparison to the general presidential election, since this data
+				    matches Democratic candidates against Trump, but it may inform us about whether or not support for a particular
+				    candidate might carry into the general election. For instance, we can look at people's
+				    polling preferences in Iowa, New Hampshire and Nevada, compared to the known outcomes of the primaries/caucuses. We
+				    know that
+				    Iowa is still being disputed (but Buttigieg and Sanders are functionally tied for 1st place), Sanders won New
+				    Hampshire, but Pete Buttigieg (2nd place) was very close to his numbers. In Nevada, Bernie won by a
+				    much bigger percentage.
+				    Below is a chart that shows the number of times each Democratic candidate beat Trump in a poll, divided by the total
+				    number of polls that that candidate was listed in. Here, "beating Trump" is calculated by taking the difference
+				    between
+				    the % of people who said they would vote for Democratic candidate X and the % of people who said they would vote for
+				    Trump. If the difference was positive, this counted as a win.
+				</p>
+					</header>
+
+					<div>
     <div id="vis"></div>
     <br/>
     (Note: The 0% values for Elizabeth Warren and Pete Buttigieg are true 0%'s - both of these candidates were asked
@@ -45,41 +84,81 @@
 </div>
 
 <p>
-    None of the candidates do very well in head-to-head matchups against Trump in Iowa. In Nevada and New Hampshire,
-    Sanders beats Trump in about 80% of the polls. In national polling, Joe Biden is the candidate with the highest % of
-    poll results that have him beating Trump. However, we see that in both New Hampshire and Nevada, Bernie Sanders was
-    the candidate that had the highest % of polls that had him beating Trump in the general election. </p>
+    None of the candidates do very well in head-to-head matchups against Trump in Iowa. In Nevada and New Hampshire, Sanders beats Trump in about 80% of the polls. In national polling, Joe Biden is the candidate with the highest % of poll results that have him beating Trump. However, we see that in both New Hampshire and Nevada, Bernie Sanders was the candidate that had the highest % of polls that had him beating Trump in the general election. </p>
 
-<h2>2. Do candidates' favorability change by polling method? </h2>
 
-It might also be useful to look at candidate performance by polling methodology. We know that Bernie Sanders does
-extremely well among young voters, who might be more likely to answer polls conducted online or via text. Biden, on the
-other hand, performs well among older voters, who may be more likely to answer polls conducted over the phone. The chart
-below shows the breakdown of candidates' favorability percentages by region and polling methodology.
-<div>
-    <div id="vis2"></div>
-    <br/>
-</div>
 
-From the data, we see that for a given region, the Democratic candidates all seem to have similar trends by polling
-methods. For instance, in the Midwest, Sanders, Warren, and Biden all do the worst in Automated Phone polls. In the
-South, however, all of the candidates do the worst in Live Phone/Online polls.
-This seems to indicate that regional differences may be a stronger factor in how a candidate performs in polls, rather
-than polling methodology.
+				</div>
 
-<h3>3. Where does Trump do extremely well in terms of voter preferences?
-</h3>
 
-We know that Donald Trump won several key swing states in the Midwest, like Ohio and Michigan. He also won many Southern
+			</section>
+
+			<section id="four" class="wrapper style3">
+				<div class="inner">
+
+					<header class="align-center">
+						<h2>2. Do candidates' favorability change by polling method?</h2>
+										<p>
+				    It might also be useful to look at candidate performance by polling methodology. We know that Bernie Sanders does extremely well among young voters, who might be more likely to answer polls conducted online or via text. Biden, on the other hand, performs well among older voters, who may be more likely to answer polls conducted over the phone. The chart below shows the breakdown of candidates' favorability percentages by region and polling methodology.
+			<div>
+			    <div><div id="vis2" style="float:center; width: 100%;"></div>
+			    </div> <br/>
+			    (It is possible to examine trends for one region by using the dropdown menu, or view polling methodology trends across all regions.)
+			   
+			</div> From the data, we see that for a given region, the Democratic candidates all seem to have similar trends by polling methods. For instance, in the Midwest, Sanders, Warren, and Biden all do the worst in Automated Phone polls. In the South, however, all of the candidates do the worst in Live Phone/Online polls. This seems to indicate that regional differences may be a stronger factor in how a candidate performs in polls, rather than polling methodology.
+
+				</div>
+
+
+			</section>
+
+			<section id="four" class="wrapper style3">
+				<div class="inner">
+
+					<header class="align-center">
+						<h2>3. Where does Trump do extremely well in terms of voter preferences?</h2>
+						We know that Donald Trump won several key swing states in the Midwest, like Ohio and Michigan. He also won many Southern
 states, but didn't perform very well in states on the West Coast, or in the Northeast/Mid-Atlantic regions of the US. It
 would be useful to know if he can repeat his success in the Midwest and South in 2020. The chart below shows his average
 favorability ratings over time, by pollster and state. In the chart, we can also compare different regions to national
 trends.
 <div>
-    <div id="vis3"></div>
-    <br/>
+    <div id="vis3"></div>    <br/>
+ (It is possible to examine trends for one region compared to the national level trends by using the radio buttons to select whether or not national results should also be displayed.)
+
 </div>
 
+<p>There are clear regional differences in Trump's favorability. Trump's favorability in the Midwest, for example, is mostly in line with national level trends (with some polls in North Dakota and Missouri putting him at higher favorability). On the other hand, Trump's favorability in West Coast states is noticeably lower. We don't see many clear differences over time, indicating that support for/against Trump has mainly remained stable from mid-2018 and 2020. </p>
+		</section>
+
+
+<section id="one" class="wrapper style2">
+				<div class="inner">
+					<div class="box">
+						<div class="image fit">
+							<img src="images/pic01.jpg" alt="" />
+						</div>
+						<div class="content">
+							<hr />
+							<p>There are several future directions that we could examine as more polling data is collected, and more primary results flow in. For example, we could add in indicators for national and world events such as the novel Coronavirus outbreak, or the recent impeachment trial. Going into the 2020 presidential general election, will be interesting to see if these trends hold, or if they change. </p>
+
+							<p> 
+						</div>
+					</div>
+				</div>
+			</section>
+
+	
+
+
+	
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
 
 <script type="text/javascript">
     let jsonSpec = "json_files/nh_nv_national_chart.json";
@@ -102,5 +181,5 @@ trends.
     }).catch(
         console.error)
 </script>
-</body>
+	</body>
 </html>

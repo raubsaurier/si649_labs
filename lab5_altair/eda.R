@@ -162,4 +162,20 @@ plot_usmap(data = trump_by_state, values = "median_dem_lead") +
   theme(legend.position = "right")
 
 
+#### What are the regions with the highest # of polls? 
+
+pollCount  <- pollData %>%
+  group_by(candidate_name, region, poll_id) %>%
+  count(poll_id)
+
+## count # of polls 
+pollCount  <- pollCount %>%
+  group_by(candidate_name, region) %>%
+  summarize(n_polls = sum(n))
+
+## 
+ggplot(pollCount, aes(x=candidate_name, y=n_polls, fill=region, colour=region)) + 
+  geom_bar(stat="identity", position="dodge") + 
+  labs(title="Number of Polls Each Candidate Appeared In", subtitle="Grouped by U.S. Region") +
+  theme(legend.position = "right")
 

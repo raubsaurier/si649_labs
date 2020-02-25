@@ -32,6 +32,9 @@ questions in our dataset.
     <img src="sketches/pct_beat_trump_sketch.png" ,height="250" , width="400">
 </p>
 
+<p> After exploring this data further, I realized that a bar chart might be a more appropriate way to graph the favoraibility percentages, because people could compare the heights more easily. I also added Nevada (the next caucus to vote) and National level data so that there were more comparison that could be made, rather than just focusing on Iowa and New Hampshire. </p>
+
+
 
 <p>
 <h2>2. Which Democratic candidates are the "most polarizing"? </h2>
@@ -42,17 +45,19 @@ percentages against Trump.
     <img src="img/dem_candidate_variability.svg">
 </p>
 
-It looks like Pete Buttigieg and Joe Biden have the highest "variability" in terms of the head-to-head percentage
-    point differences.
+It looks like Pete Buttigieg and Joe Biden have the highest "variability" in terms of the head-to-head percentage point differences.
+<p>I ultimatley decided not to go with this sketch because I felt that other visualizations were more interesting. </p>
 
 <p>
-    <h2>3. How many times are candidates generally polled?</h2>
+    <h2>3. How many polls mention each candidate? Where are these polls being conducted?</h2>
 </p>
-We find that Biden has the highest # of polling questions at 323. Sanders has 296, Elizabeth Warren has 288,
-Pete Buttigieg has 174 and Kamala Harris has 150. These candidates have been in the race for the longest (although
-Harris has already dropped out), so this is not surprising. Amy Klobuchar, surprisingly, is only mentioned in 34 polling
-questions. We assume this is because she didn't have the name recognition of her peers until recently.
-</p>
+
+We can look at a breakdown of the number of polls that mention each Democratic candidate (as well as Trump).
+</br>
+<img src="img/num_polls_region.svg", height="600" , width="900">
+
+<p>We see that Trump (obviously) has the highest number of polls that mention him. We also see that a majority of polls are being conducted in the Midwest, which makes sense since several key "swing states" are located in that region.</p>
+
 <p>
 <h2>4. Do candidates' popularity change by polling methodology?</h2>
 
@@ -71,7 +76,7 @@ Sketch 2:<br>  <img src="sketches/sketch2_polling_method.png" , height="250" , w
 Sketch 3: <br>
 <img src="sketches/sketch3_polling_method.png" , height="250" , width="400">
 
-
+<p>After creating this visualization, I decided to use a scatteplot with election percentage and pollinbg methodology, since scatterplots show correlations well. I also made each candidate have their own graph (grouping by columns) so that it would be easy to compare trends across candidates. </p>
 
 </p>
 <p>
@@ -89,10 +94,7 @@ We probably already have some idea, but a visualization can help us in figuring 
 <img src="sketches/trump_h2h_time.png" , height="250" , width="400">
 </br>
 
-Sketch 2: This would show, per poll and state, the head-to-head percentage differences of Democratic contenders vs
-Trump:
-
-
+Sketch 3: This would show, per poll and state, the head-to-head percentage differences of Democratic contenders vs Trump:
 <br>
 <img src="sketches/trump_h2h_states.png" , height="250" , width="400">
 </br>
