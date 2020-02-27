@@ -2,6 +2,9 @@
 
 <body>
 <p>
+<h2>Data Processing</h2>
+<p>An aspect of the data that I noticed was that there were many values in the "candidate_name" field, some of whom are not running at all for the 2020 general election (e.g. Michelle Obama). I decided to filter my dataset to only the top 5 candidates in the Democratic primary (Sanders, Biden, Warren, Buttigieg, and Klobuchar) as well as Donald Trump (the likely 2020 Republican nominee). </p>
+<p>One metric that I wanted to calculate was an indicator of whether or not that particular candidate's percentage was higher (winner) or lower (loser) against the other candidate, for each poll. </p>
     <h2>1. Do general election favorability ratings tend to follow primary elections?</h2>
 </p>
 This is not an exact comparison, since this data matches Democratic candidates against Trump, but it may inform us if
@@ -32,7 +35,7 @@ questions in our dataset.
     <img src="sketches/pct_beat_trump_sketch.png" ,height="250" , width="400">
 </p>
 
-<p> After exploring this data further, I realized that a bar chart might be a more appropriate way to graph the favoraibility percentages, because people could compare the heights more easily. I also added Nevada (the next caucus to vote) and National level data so that there were more comparison that could be made, rather than just focusing on Iowa and New Hampshire. </p>
+<p> After exploring this data further, I realized that a bar chart might be a more appropriate way to graph the favoraibility percentages, because people could compare the heights more easily. I also added Nevada (the next caucus to vote) and National level data so that there were more comparison that could be made, rather than just focusing on Iowa and New Hampshire. Finally, I changed the y-axis to be the number of times that candidate beat Trump in a poll, divided by the number of polls that mentioned that candidate. I thought this would be an easier way to visualize how "popular" a candidate was overall. </p>
 
 
 
@@ -76,7 +79,7 @@ Sketch 2:<br>  <img src="sketches/sketch2_polling_method.png" , height="250" , w
 Sketch 3: <br>
 <img src="sketches/sketch3_polling_method.png" , height="250" , width="400">
 
-<p>After creating this visualization, I decided to use a scatteplot with election percentage and pollinbg methodology, since scatterplots show correlations well. I also made each candidate have their own graph (grouping by columns) so that it would be easy to compare trends across candidates. </p>
+<p>After creating this visualization, I decided to use a scatterplot with election percentage and polling methodology, since scatterplots show correlations well. I also made each candidate have their own graph (grouping by columns) so that it would be easy to compare trends across candidates. </p>
 
 </p>
 <p>
@@ -98,7 +101,7 @@ Sketch 3: This would show, per poll and state, the head-to-head percentage diffe
 <br>
 <img src="sketches/trump_h2h_states.png" , height="250" , width="400">
 </br>
-<p>After creating this visualization, I felt that it would definitely be useful to add in a drop down menu so that users could select a particular region and compare it to the national favorability ratings over time. That is reflected in my final article. </p>
+<p>After creating this visualization, I decided not to do a map, since not every state has polling data, and I felt that the greyed out states would distract from the visualization. Instead, I created a scatterplot with time on the x axis and favorability % on the y axis. I felt that it would definitely be useful to add in a drop down menu so that users could select a particular region and compare it to the national favorability ratings over time. That is reflected in my final version of this visualization. </p>
 
 </body>
 </html>
